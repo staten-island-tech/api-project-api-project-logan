@@ -4,7 +4,53 @@ body {
   padding: 0;
   margin: 0;
   font-size: 62.5%;
+  background-color: green;
   //color: white;
   //font-family: $font-second;
   //font-weight: 500;
+  font-size: 1.5rem;
+}
+.recipe-title {
+  text-align: center;
+}
+.searched {
+  text-align: center;
+}
+.recipe-card-back {
+  background-color: white;
+  border-radius: 20px;
+  width: 40vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  &:hover {
+    display: flex;
+    flex-direction: column;
+  }
+}
+li {
+  padding-left: 1.3rem;
+}
+
+.recipe-card-front {
+  background-color: white;
+  border-radius: 20px;
+  width: 40vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recipe-card {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.food-pic {
+}
+.food-title {
+  padding: 1rem;
+  text-align: center;
 }
