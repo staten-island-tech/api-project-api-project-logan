@@ -27,6 +27,7 @@ const query = async function () {
         <div class="recipe-card-back">
         <li> fig preserves</li>  //create an li based on the amount of missing/used/unused items
         // new forEach for teh ingredients list?
+        //add data on calories?
 
         <li>baguette</li>
         <li>cream cheese</li>
