@@ -10,9 +10,30 @@ const query = async function () {
     ); //fetch is searching for ingredients "bread, cheese"
     const data = await response.json();
     console.log(data);
-    /*data.forEach((recipe) =>{ //grid is the name of your section tag
-        DOMSelectors.grid.insertAdjacentHTML('beforeend', `COPY OVER YOUR HTML`)
-    })*/
+    data.forEach((recipe) => {
+      //grid is the name of your section tag
+      DOMSelectors.grid.insertAdjacentHTML(
+        "beforeend",
+        `<div class="recipe-card">
+        <div class="recipe-card-front">
+          <div class="food-title">${recipe.title} </div>
+          <img
+            src="${recipe.image}"
+            alt=""
+            class="food-pic"
+          />
+        </div>
+
+        <div class="recipe-card-back">
+        <li> fig preserves</li>  //create an li based on the amount of missing/used/unused items
+        // new forEach for teh ingredients list?
+
+        <li>baguette</li>
+        <li>cream cheese</li>
+
+          </div>`
+      );
+    });
   } catch (error) {
     console.log(error);
     alert("something is wrong");
