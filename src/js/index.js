@@ -25,12 +25,9 @@ const query = async function () {
         </div>
 
         <div class="recipe-card-back">
-        <li> fig preserves</li>  //create an li based on the amount of missing/used
-        // new forEach for teh ingredients list?
-        //add data on calories?
-
-        <li>baguette</li>
-        <li>cream cheese</li>
+        <li> ${recipe.missedIngredients[0].name}</li>  
+        <li>${recipe.usedIngredients[0].name}</li>
+        <li></li>
 
           </div>`
       );
@@ -42,3 +39,21 @@ const query = async function () {
 };
 
 query();
+
+const listCreator = async function () {
+  const response = await fetch(
+    `https://api.spoonacular.com/recipes/findByIngredients?ingredients=bread, cheese&apiKey=4553a2a9652947a58958783303dcd88b&ranking=2`
+  );
+  const data = await response.json();
+  data.forEach((ingredient) => {
+    console.log(ingredient.usedIngredientCount);
+    //keep iterating until the number of li's = used-1
+    //if function
+    const used = ingredient.usedIngredientCount;
+
+    console.log(ingredient.missedIngredientCount);
+    const missing = ingredient.missedIngredientCount;
+  });
+};
+
+listCreator();
