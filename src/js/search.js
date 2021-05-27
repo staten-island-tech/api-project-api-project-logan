@@ -11,7 +11,7 @@ const listen = function () {
     const searchQuery = async function () {
       try {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${searchParams}&number=2&apiKey=${key2}&ranking=2`
+          `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${searchParams}&apiKey=${key2}&ranking=2`
         ); //fetch is searching for ingredients "bread, cheese"
         const data = await response.json();
         //console.log(data);
