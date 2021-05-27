@@ -1,23 +1,22 @@
 @import "_food.scss";
 @import "_search.scss";
 
-$font-main: "Asap", sans-serif;
-$font-second: "Josefin Slab", serif;
 html,
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-size: 62.5%;
-  background-color: green;
+  background-image: url(/images/recipebg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   //color: white;
   //font-family: $font-second;
   //font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
-.recipe-title {
-  text-align: center;
-}
+
 .searched {
   text-align: center;
 }

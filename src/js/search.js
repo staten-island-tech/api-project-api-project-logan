@@ -16,18 +16,33 @@ const listen = function () {
         const data = await response.json();
         //console.log(data);
         data.forEach((recipe) => {
-          //grid is the name of your section tag
           DOMSelectors.grid.insertAdjacentHTML(
             "beforeend",
-            `<div class="recipe-card">
+            ` <div class="recipe-card">
                   <div class="recipe-card-front">
                     <div class="food-title">${recipe.title} </div>
                     <img
                       src="${recipe.image}"
                       alt=""
                       class="food-pic"/>
-                  </div>`
+              </div>
+              <section class="food" >
+    <div class="food-content">
+      <a class="card" href="#!">
+        <div class="front pizza"></div>
+        <div class="back">
+          <div>
+            <span class="food-content">${recipe.title}</span>
+            <span class="food-content"
+              >Provident consectetur natus voluptatem quis tenetur sed
+              beatae eius sint.</span>
+          </div>
+        </div>
+      </a>
+      </div>
+      </section>`
           );
+    
         });
       } catch (error) {
         console.log(error);
