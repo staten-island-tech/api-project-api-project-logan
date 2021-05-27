@@ -25,24 +25,13 @@ const listen = function () {
                       src="${recipe.image}"
                       alt=""
                       class="food-pic"/>
+                    </div>
+                  </div>
               </div>
-              <section class="food" >
-    <div class="food-content">
-      <a class="card" href="#!">
-        <div class="front pizza"></div>
-        <div class="back">
-          <div>
-            <span class="food-content">${recipe.title}</span>
-            <span class="food-content"
-              >Provident consectetur natus voluptatem quis tenetur sed
-              beatae eius sint.</span>
-          </div>
-        </div>
       </a>
       </div>
       </section>`
           );
-    
         });
       } catch (error) {
         console.log(error);
