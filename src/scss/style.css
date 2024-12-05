@@ -1,0 +1,241 @@
+.food-body {
+  background-color: #111;
+  text-align: center;
+}
+
+.food {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: black;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 4rem;
+  height: auto;
+  background-attachment: fixed;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.food-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  color: black;
+  cursor: pointer;
+  width: 27vw;
+  height: 32vh;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  position: relative;
+  margin: 3rem;
+}
+
+.front,
+.back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: ease-in-out 600ms;
+  transition: ease-in-out 600ms;
+}
+
+.front {
+  background-size: cover;
+  padding: 2rem;
+  font-size: 1.6rem;
+  color: #fff;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+}
+
+.front:before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+.card:hover .front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card:nth-child(even):hover .front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.pizza:before {
+  background-image: url(/images/pizza.jpg);
+}
+
+.pasta:before {
+  background-image: url(/images/pasta.jpg);
+  background-position: center;
+}
+
+.lasagna:before {
+  background-image: url(/images/lasagna.jpg);
+}
+
+.risotto:before {
+  background-image: url(/images/risotto.jpg);
+  background-position: center;
+}
+
+.calamari:before {
+  background-image: url(/images/calamari.jpg);
+  background-position: center;
+}
+
+.caprese:before {
+  background-image: url(/images/caprese.jpg);
+}
+
+.back {
+  background-color: white;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  padding: 2rem;
+}
+
+.card:hover .back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.card:nth-child(even) .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card:nth-child(even):hover .back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.food-header {
+  padding: 0rem;
+  font-size: 5rem;
+  font-style: italic;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  background-color: green;
+  font-size: 1.5rem;
+}
+
+.recipe-title {
+  text-align: center;
+}
+
+.searched {
+  text-align: center;
+}
+
+.recipe-card-back {
+  background-color: white;
+  border-radius: 20px;
+  width: 40vw;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.recipe-card-back:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+li {
+  padding-left: 1.3rem;
+}
+
+.recipe-card-front {
+  background-color: white;
+  border-radius: 20px;
+  width: 40vw;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recipe-card {
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.food-title {
+  padding: 1rem;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
